@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon --config \"nodemon.json\" server.js",
-    "client":"webpack -w",
+    "client":"webpack -w --mode development",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
