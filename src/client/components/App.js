@@ -1,6 +1,7 @@
 // this is the react main component 
 
 import React, { Component } from 'react';
+import './App.css';
 
 export default class App extends Component {
   constructor(props) {
