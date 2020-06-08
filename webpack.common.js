@@ -17,19 +17,12 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader"
-        ]
       }
     ]
   },
   
-  plugins: [
-    new htmlWebpackPlugin({
+  plugins: [  
+    new htmlWebpackPlugin({  // will create an html file and take care of linking the proper files
       template: path.resolve(__dirname, 'src', 'client', 'templates', 'index.html')
     })
   ]
