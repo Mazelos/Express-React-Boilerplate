@@ -2,12 +2,13 @@
 
 import React, { Component } from 'react';
 import './App.css';
+import { getData } from '../util/getData';
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      message: ""
+      title: ""
     }
     this.getData = this.getData.bind(this);
   }
@@ -16,20 +17,16 @@ export default class App extends Component {
     this.getData();
   }
 
-  getData() {
-    fetch('http://localhost:8000/', { method: "get" }).then(response => {
-      return response.json() 
-    }).then(jsonResponse => {
-      this.setState({
-        message: jsonResponse.message
-      })
-    }) 
+  async getData() {
+    const title = await getData();
+    this.setState({
+      title: title
+    })
   }
 
   render() {
-    console.log(this.state.message);
     return (
-      <h1>{this.state.message}</h1>
+      <h1>{this.state.title}</h1>
     )
   }
 }
