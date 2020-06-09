@@ -5,7 +5,7 @@
   ],
 
   "plugins": [
-    [  // this prevent regeneratorRuntime error with async-await syntax transpiling
+    [ // this prevent regeneratorRuntime error with async-await syntax transpiling
       "@babel/plugin-transform-runtime",
       {
         "regenerator": true
