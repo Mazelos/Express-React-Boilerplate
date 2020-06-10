@@ -27,7 +27,7 @@ It's configured using different technologies such as :
 
 
 
-### Istallation 
+### Installation 
 
 First clone the repository move into the project
 
